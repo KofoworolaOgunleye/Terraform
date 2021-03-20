@@ -1,5 +1,5 @@
 module "webserver" {
-  source                        = "github.com/KofoworolaOgunleye/Terraform"
+  source                        = "../Modules/aws_module"
   region                        = var.region
   profile                       = var.profile
   vpc_cidr                      = var.vpc_cidr
