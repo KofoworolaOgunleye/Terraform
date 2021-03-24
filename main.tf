@@ -190,13 +190,13 @@ resource "aws_lb_listener" "https_redirect" {
 }
 
 resource "aws_lb_target_group" "target_groupELB" {
-  port     = 80
-  protocol = "HTTP"
+  port     = 443
+  protocol = "HTTPS"
   vpc_id   = aws_vpc.And_vpc.id
 
   health_check {
     healthy_threshold   = 2
-    protocol            = "HTTP"
+    protocol            = "HTTPS"
     unhealthy_threshold = 2
   }
 
